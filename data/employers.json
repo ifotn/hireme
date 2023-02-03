@@ -1,16 +1,14 @@
-{
-    "employers": [
-        {
-            "name": "Provix"
-        },
-        {
-            "name": "Element6"
-        },
-        {
-            "name": "Netgain"
-        },
-        {
-            "name": "44 North"
-        }
-    ]   
-}
+[
+    {
+        "name": "Provix"
+    },
+    {
+        "name": "Element6"
+    },
+    {
+        "name": "Netgain"
+    },
+    {
+        "name": "44 North"
+    }
+]   
