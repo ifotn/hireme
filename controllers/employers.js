@@ -6,7 +6,7 @@ const fs = require('fs');
 
 /* GET employers index (the module home page) */
 router.get('/', (req, res) => {
-    const employers = [
+    /*const employers = [
         {
             "name": "Provix"
         },
@@ -24,10 +24,10 @@ router.get('/', (req, res) => {
     res.render('employers/index', {
         title: 'Employer List',
         employers: employers
-    });
-    
+    });*/
+
     // get data from json file
-    /*fs.readFile('./data/employers.json', 'utf8', (err, employers) => {
+    fs.readFile('./data/employers.json', 'utf8', (err, employers) => {
         if (err) {
             console.log(err)
         }
@@ -35,10 +35,10 @@ router.get('/', (req, res) => {
             console.log(employers);
             res.render('employers/index', {
                 title: 'Employer List',
-                employers: employers
+                employers: JSON.parse(employers)
             });
         }
-    });  */ 
+    });  
 })
 
 // make public
