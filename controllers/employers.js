@@ -4,6 +4,9 @@ const router = express.Router();
 // add fs to read the data file
 const fs = require('fs');
 
+// use Employer model for CRUD w/mongoose
+const Employer = require('../models/employer');
+
 /* GET employers index (the module home page) */
 router.get('/', (req, res) => {
     /*const employers = [
@@ -44,6 +47,18 @@ router.get('/', (req, res) => {
 /* GET /create - display form to add an employer */
 router.get('/create', (req, res) => {
     res.render('employers/create');
+});
+
+/* POST /create - submit form data to mongodb */
+router.post('/create', (req, res) => {
+    Employer.create(req.body, (err, newDocument) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.redirect('/employers');
+        }
+    });
 });
 
 // make public

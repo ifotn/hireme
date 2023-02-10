@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 const employerSchema = new mongoose.Schema({
     name: {
         type: String,
-        required
+        required: 'Name is required'
     },
     city: {
         type: String,
-        required
+        required: 'City is required'
     },
     contactEmail: {
         type: String

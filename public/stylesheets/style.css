@@ -28,3 +28,12 @@ h1 {
 .nav-link {
   color: #FFFFFF;
 }
+
+fieldset {
+  border: none;
+  margin: 5px;
+}
+
+label {
+  width: 130px;
+}
