@@ -41,7 +41,7 @@ router.get('/', (req, res) => {
                 employers: JSON.parse(employers)
             });
         }
-    });  
+    }); 
 });
 
 /* GET /create - display form to add an employer */
