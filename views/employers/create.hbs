@@ -6,7 +6,11 @@
     </fieldset>
     <fieldset>
         <label for="city">City: *</label>
-        <input type="text" name="city" id="city" required />
+        <select name="city" id="city" required>
+            {{#each cities}}
+                <option>{{this.name}}</option>
+            {{/each}}
+        </select>
     </fieldset>
     <fieldset>
         <label for="comments">Comments:</label>

@@ -1,7 +1,26 @@
 <h1>Employer List</h1>
 <a href="/employers/create">Add a New Employer</a>
-<ul>
-    {{#each employers}}
-        <li>{{this.name}}</li>
-    {{/each}}
-</ul>
+<table class="table table-striped table-hover">
+    <thead>
+        <th>Name</th>
+        <th>City</th>
+        <th>Email</th>
+        <th># of Employees</th>
+    </thead>
+    <tbody>
+        {{#each employers}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.city}}</td>
+                <td>
+                    {{#if this.contactEmail}}
+                        <a href="mailto:{{this.contactEmail}}">
+                            {{this.contactEmail}}
+                        </a>   
+                    {{/if}}             
+                </td>
+                <td>{{this.employees}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
