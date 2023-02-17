@@ -44,6 +44,16 @@ app.use('/users', usersRouter);
 app.use('/employers', employers);
 app.use('/cities', cities);
 
+// add hbs extension function to select the correct dropdown option when editing
+const hbs = require('hbs');
+hbs.registerHelper('selectOption', (currentValue, selectedValue) => {
+  let selectedProperty = '';
+  if (currentValue == selectedValue) {
+    selectedProperty = ' selected';
+  }
+  return new hbs.SafeString(`<option${selectedProperty}>${currentValue}</option>`);
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

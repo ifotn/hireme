@@ -1,0 +1,28 @@
+<h1>Employer Details</h1>
+<form method="post">
+    <fieldset>
+        <label for="name">Name: *</label>
+        <input type="text" name="name" id="name" required value="{{employer.name}}" />
+    </fieldset>
+    <fieldset>
+        <label for="city">City: *</label>
+        <select name="city" id="city" required>
+            {{#each cities}}
+                {{selectOption this.name ../employer.city}}
+            {{/each}}
+        </select>
+    </fieldset>
+    <fieldset>
+        <label for="comments">Comments:</label>
+        <textarea name="comments" id="comments">{{employer.comments}}</textarea>
+    </fieldset>
+    <fieldset>
+        <label for="contactEmail">Contact Email:</label>
+        <input type="email" name="contactEmail" id="contactEmail" value="{{employer.contactEmail}}" />
+    </fieldset>
+    <fieldset>
+        <label for="employees"># of Employees:</label>
+        <input type="number" min="1" name="employees" id="employees" value="{{employer.employees}}" />
+    </fieldset>
+    <button class="btn btn-secondary offset-1">Save</button>
+</form>
