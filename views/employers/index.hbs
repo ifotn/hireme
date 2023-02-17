@@ -6,6 +6,7 @@
         <th>City</th>
         <th>Email</th>
         <th># of Employees</th>
+        <th class="text-center">Actions</th>
     </thead>
     <tbody>
         {{#each employers}}
@@ -20,6 +21,14 @@
                     {{/if}}             
                 </td>
                 <td>{{this.employees}}</td>
+                <td class="text-center">
+                    <a href="/employers/edit/{{this._id}}" title="Edit">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    <a href="/employers/delete/{{this._id}}" title="Delete" onclick="return confirmDelete();">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>                
+                </td>
             </tr>
         {{/each}}
     </tbody>

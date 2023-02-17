@@ -86,5 +86,17 @@ router.post('/create', (req, res) => {
     });
 });
 
+/* GET /delete/abc123 => delete selected employer document using the url param.  : indicates param */
+router.get('/delete/:_id', (req, res) => {
+    Employer.remove({ _id: req.params._id }, (err) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.redirect('/employers');
+        }
+    });
+});
+
 // make public
 module.exports = router;

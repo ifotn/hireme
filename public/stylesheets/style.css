@@ -9,7 +9,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #DB0007;
 }
 
 main {
@@ -21,8 +21,13 @@ main {
   padding-left: 20px;
 }
 
-h1 {
+h1, i {
   color: #063672;
+  padding: 4px;
+}
+
+i:hover {
+  color: #DB0007;
 }
 
 .nav-link {
@@ -36,4 +41,9 @@ fieldset {
 
 label {
   width: 130px;
+}
+
+thead {
+  color: #FFFFFF;
+  background-color: #063672;
 }
