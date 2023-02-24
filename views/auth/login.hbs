@@ -1,4 +1,9 @@
 <h1>Login</h1>
+{{#if messages}}
+    <p class="alert alert-danger">Invalid Login</p>        
+{{else}}
+    <p class="alert alert-secondary">Please enter your credentials</p>   
+{{/if}}
 <form method="post">
     <fieldset class="form-group">
         <label for="username" class="col-2 control-label">Username: *</label>
