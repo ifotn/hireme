@@ -47,3 +47,7 @@ thead {
   color: #FFFFFF;
   background-color: #063672;
 }
+
+#imgShowHide {
+  cursor: pointer;
+}
